@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecosystem · Meridian One</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+  <style>
+    .eco-layer{ background: var(--brand-surface); border: 1px solid var(--brand-hairline); border-radius: 10px; padding: 14px 16px; position: relative; }
+    .eco-layer .layer-title{ font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-lo); font-weight: 700; margin-bottom: 10px; }
+    .eco-layer h4{ margin: 0 0 10px 0; font-size: 15.5px; color: var(--text-hi); }
+    .eco-chip{ display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; background: var(--brand-elevated); border: 1px solid var(--brand-hairline); border-radius: 6px; font-size: 12px; font-weight: 600; }
+    .eco-chip .dot{ width: 8px; height: 8px; border-radius: 50%; background: var(--brand-accent); }
+    .eco-row{ display: flex; flex-wrap: wrap; gap: 10px; }
+    .eco-arrow{ text-align: center; color: var(--text-lo); font-size: 20px; margin: 4px 0; }
+    .eco-persona{ background: linear-gradient(180deg, rgba(255,45,90,0.06), rgba(77,229,255,0.04)); border: 1px solid var(--brand-hairline); border-left: 3px solid var(--brand-primary); border-radius: 8px; padding: 12px 14px; }
+  </style>
+</head>
+<body>
+  <div id="__nav__"></div>
+
+  <main class="shell page stack">
+
+    <!-- ============ HERO ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Ecosystem · How Revenue Pulse is wired</div>
+          <h3>The experience-data stack behind Meridian One</h3>
+          <div class="muted mt-4" style="font-size: 12.5px;">From raw telco operational data through XM signals into CRO-grade action — six layers, one storyline.</div>
+        </div>
+        <div class="row gap-10">
+          <span class="pill pill-info">6 layers</span>
+          <span class="pill pill-good">Live</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LAYERED ARCHITECTURE ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Architecture · Top-down flow</div><h3>Sources → Integration → Modeling → Agents → Interaction → Personas</h3></div>
+      </div>
+
+      <!-- Personas layer -->
+      <div class="eco-layer" style="border-left: 3px solid var(--brand-primary);">
+        <div class="layer-title">6 · Decision Personas · Who consumes the insight</div>
+        <div class="grid grid-3">
+          <div class="eco-persona">
+            <div class="strong" style="font-size: 13.5px;">Chief Revenue Officer</div>
+            <div class="muted" style="font-size: 11.5px; margin-top: 2px;">John Marlowe</div>
+            <hr class="divider" />
+            <div style="font-size: 12px; line-height: 1.5;">Forecast integrity, revenue exposure, strategic asks to board.</div>
+          </div>
+          <div class="eco-persona" style="border-left-color: var(--brand-accent);">
+            <div class="strong" style="font-size: 13.5px;">EVP Consumer Mobility</div>
+            <div class="muted" style="font-size: 11.5px; margin-top: 2px;">Priya Ramanathan</div>
+            <hr class="divider" />
+            <div style="font-size: 12px; line-height: 1.5;">Postpaid churn, ARPU, FMC attach, first-30-day experience.</div>
+          </div>
+          <div class="eco-persona" style="border-left-color: var(--brand-gold);">
+            <div class="strong" style="font-size: 13.5px;">EVP Business</div>
+            <div class="muted" style="font-size: 11.5px; margin-top: 2px;">Alina Chen</div>
+            <hr class="divider" />
+            <div style="font-size: 12px; line-height: 1.5;">Enterprise renewal, private-5G pipeline, NRR defense.</div>
+          </div>
+          <div class="eco-persona" style="border-left-color: var(--status-good);">
+            <div class="strong" style="font-size: 13.5px;">EVP Home</div>
+            <div class="muted" style="font-size: 11.5px; margin-top: 2px;">Marco Velasquez</div>
+            <hr class="divider" />
+            <div style="font-size: 12px; line-height: 1.5;">Fiber / FWA net-adds, activation cycle, broadband NPS.</div>
+          </div>
+          <div class="eco-persona" style="border-left-color: #A78BFA;">
+            <div class="strong" style="font-size: 13.5px;">SVP Customer Care</div>
+            <div class="muted" style="font-size: 11.5px; margin-top: 2px;">Dion Okafor</div>
+            <hr class="divider" />
+            <div style="font-size: 12px; line-height: 1.5;">Bill-shock, self-serve deflection, agent assist, save-save loops.</div>
+          </div>
+          <div class="eco-persona" style="border-left-color: #60A5FA;">
+            <div class="strong" style="font-size: 13.5px;">EVP Network</div>
+            <div class="muted" style="font-size: 11.5px; margin-top: 2px;">Kenji Yamamoto</div>
+            <hr class="divider" />
+            <div style="font-size: 12px; line-height: 1.5;">VoLTE MOS, 5G monetization, RAN-to-revenue correlation.</div>
+          </div>
+        </div>
+      </div>
+      <div class="eco-arrow">▲</div>
+
+      <!-- Interaction Layer -->
+      <div class="eco-layer" style="border-left: 3px solid var(--brand-accent);">
+        <div class="layer-title">5 · Interaction Layer · How humans consume AI</div>
+        <div class="eco-row">
+          <span class="eco-chip"><span class="dot"></span>Revenue Pulse Dashboard</span>
+          <span class="eco-chip"><span class="dot"></span>CRO Briefing Stream</span>
+          <span class="eco-chip"><span class="dot"></span>Account Console</span>
+          <span class="eco-chip"><span class="dot"></span>Slack / Teams Digests</span>
+          <span class="eco-chip"><span class="dot"></span>Board Pack Auto-Compile</span>
+          <span class="eco-chip"><span class="dot"></span>Mobile Field Alerts</span>
+          <span class="eco-chip"><span class="dot"></span>API for BI / Tableau</span>
+        </div>
+      </div>
+      <div class="eco-arrow">▲</div>
+
+      <!-- Agent Orchestration Layer -->
+      <div class="eco-layer" style="border-left: 3px solid var(--brand-gold);">
+        <div class="layer-title">4 · Agent Orchestration · Specialized XM agents</div>
+        <div class="grid grid-3">
+          <div class="eco-chip" style="justify-content: flex-start;"><span class="dot" style="background: var(--status-bad);"></span>Churn Prevention Agent</div>
+          <div class="eco-chip" style="justify-content: flex-start;"><span class="dot" style="background: var(--status-bad);"></span>Bill-Shock Prevention Agent</div>
+          <div class="eco-chip" style="justify-content: flex-start;"><span class="dot" style="background: var(--status-warn);"></span>Fiber Activation Agent</div>
+          <div class="eco-chip" style="justify-content: flex-start;"><span class="dot" style="background: var(--status-warn);"></span>Network Experience Agent</div>
+          <div class="eco-chip" style="justify-content: flex-start;"><span class="dot" style="background: var(--status-warn);"></span>B2B Renewal Agent</div>
+          <div class="eco-chip" style="justify-content: flex-start;"><span class="dot" style="background: var(--status-good);"></span>FMC Cross-Sell Agent</div>
+        </div>
+      </div>
+      <div class="eco-arrow">▲</div>
+
+      <!-- Modeling Layer -->
+      <div class="eco-layer" style="border-left: 3px solid #A78BFA;">
+        <div class="layer-title">3 · Modeling · Intelligence that turns data into signal</div>
+        <div class="eco-row">
+          <span class="eco-chip"><span class="dot" style="background:#A78BFA;"></span>Churn Propensity Models</span>
+          <span class="eco-chip"><span class="dot" style="background:#A78BFA;"></span>CSAT → Port-out Causal Engine</span>
+          <span class="eco-chip"><span class="dot" style="background:#A78BFA;"></span>Experience-Weighted ARPU Decomp</span>
+          <span class="eco-chip"><span class="dot" style="background:#A78BFA;"></span>Deal-Risk Score (B2B)</span>
+          <span class="eco-chip"><span class="dot" style="background:#A78BFA;"></span>FMC Attach Uplift Models</span>
+          <span class="eco-chip"><span class="dot" style="background:#A78BFA;"></span>Bill-Shock Prediction</span>
+          <span class="eco-chip"><span class="dot" style="background:#A78BFA;"></span>VoLTE MOS → Retention</span>
+          <span class="eco-chip"><span class="dot" style="background:#A78BFA;"></span>Care-Cost-to-Serve LP</span>
+        </div>
+      </div>
+      <div class="eco-arrow">▲</div>
+
+      <!-- Integration Layer -->
+      <div class="eco-layer" style="border-left: 3px solid #60A5FA;">
+        <div class="layer-title">2 · Integration · Where signal is harmonized</div>
+        <div class="eco-row">
+          <span class="eco-chip"><span class="dot" style="background:#60A5FA;"></span>Snowflake Data Cloud · Customer 360</span>
+          <span class="eco-chip"><span class="dot" style="background:#60A5FA;"></span>Qualtrics XM Engine</span>
+          <span class="eco-chip"><span class="dot" style="background:#60A5FA;"></span>Identity Graph · Household Resolution</span>
+          <span class="eco-chip"><span class="dot" style="background:#60A5FA;"></span>Event Mesh · Kafka</span>
+          <span class="eco-chip"><span class="dot" style="background:#60A5FA;"></span>Feature Store · Tecton</span>
+        </div>
+      </div>
+      <div class="eco-arrow">▲</div>
+
+      <!-- Sources Layer -->
+      <div class="eco-layer" style="border-left: 3px solid var(--status-good);">
+        <div class="layer-title">1 · Sources · Raw telco operational systems</div>
+        <div class="grid grid-3">
+          <div>
+            <div class="muted uc" style="font-size: 10.5px; margin-bottom: 6px;">Operations & Billing</div>
+            <div class="stack" style="gap: 6px;">
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>Amdocs BSS · Billing + Charging</span>
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>Salesforce Comms Cloud · CRM</span>
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>ServiceNow CSM · Care / Field</span>
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>SAP S/4HANA · Finance</span>
+            </div>
+          </div>
+          <div>
+            <div class="muted uc" style="font-size: 10.5px; margin-bottom: 6px;">Network & Digital</div>
+            <div class="stack" style="gap: 6px;">
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>Polystar / Cellwize · RAN Performance</span>
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>Adobe Analytics · Digital Journey</span>
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>M1 Mobile App · Usage Telemetry</span>
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>Dealer POS · Activation Events</span>
+            </div>
+          </div>
+          <div>
+            <div class="muted uc" style="font-size: 10.5px; margin-bottom: 6px;">Experience & Voice</div>
+            <div class="stack" style="gap: 6px;">
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>Qualtrics XM Surveys · Transactional</span>
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>Gong · Sales Call Intelligence</span>
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>CallMiner · Care Transcripts</span>
+              <span class="eco-chip" style="width: 100%;"><span class="dot" style="background: var(--status-good);"></span>Social / Community Listening</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GOVERNANCE & TRUST ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Governance · Trust &amp; Controls</div><h3>How we keep the CRO stack safe and explainable</h3></div>
+      </div>
+      <div class="grid grid-4">
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc" style="font-size:10.5px;">Data Contracts</div>
+          <div class="mono strong" style="font-size: 20px; margin-top: 4px;">38</div>
+          <div class="muted" style="font-size: 11.5px; margin-top: 4px;">Versioned source-to-feature contracts</div>
+        </div>
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc" style="font-size:10.5px;">Model Observability</div>
+          <div class="mono strong" style="font-size: 20px; margin-top: 4px;">24</div>
+          <div class="muted" style="font-size: 11.5px; margin-top: 4px;">Live models with drift + fairness monitors</div>
+        </div>
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc" style="font-size:10.5px;">PII Controls</div>
+          <div class="mono strong good" style="font-size: 20px; margin-top: 4px;">100%</div>
+          <div class="muted" style="font-size: 11.5px; margin-top: 4px;">Tokenized at ingestion · CPNI-compliant</div>
+        </div>
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc" style="font-size:10.5px;">Agent Audit</div>
+          <div class="mono strong" style="font-size: 20px; margin-top: 4px;">Full</div>
+          <div class="muted" style="font-size: 11.5px; margin-top: 4px;">Every recommendation is traceable to signal + data point</div>
+        </div>
+      </div>
+      <div class="attn">
+        <span class="attn-title">Governance Posture</span>
+        Every agent recommendation is <strong>explainable back to the raw signal</strong> — no black-box interventions against customer accounts. CPNI, CCPA, and state-level privacy controls are enforced at the ingestion layer, so downstream agents never see raw identifiers.
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/assets/data.js"></script>
+  <script src="/assets/charts.js"></script>
+  <script src="/assets/nav.js"></script>
+</body>
+</html>

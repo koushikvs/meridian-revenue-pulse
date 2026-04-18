@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agent Network · Meridian One</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+  <div id="__nav__"></div>
+
+  <main class="shell page stack">
+
+    <!-- ============ HERO ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Agent Network · Experience-Aware AI</div>
+          <h3>Six specialist agents watching your revenue 24/7</h3>
+          <div class="muted mt-4" style="font-size:12.5px;">Grounded in Qualtrics XM · Salesforce Comms Cloud · Amdocs BSS · ServiceNow · Snowflake · Polystar</div>
+        </div>
+        <div class="row gap-10">
+          <span class="pill pill-good">6 active</span>
+          <span class="pill pill-warn">2 critical</span>
+          <span class="pill pill-info">25 signals · last 24h</span>
+        </div>
+      </div>
+      <div class="forecast-band" style="padding: 18px; margin-top: 12px;">
+        <div class="sub" style="margin-bottom: 6px;">How it works</div>
+        <div style="font-size: 14px; line-height: 1.55;">
+          Each agent owns a <strong>specific moment in the customer lifecycle</strong> and listens for structural weakness in that moment — billing, activation, renewal, bundle attach, care, network. Agents cross-talk to each other (see Active Threads below) before recommending action, so the CRO sees <strong>one coherent intervention, not six siloed alerts.</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACTIVE THREADS ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Active Agent Threads · Cross-functional collaborations in flight</div><h3>What agents are working on right now</h3></div>
+      </div>
+      <div class="stack" id="threads"></div>
+    </section>
+
+    <!-- ============ AGENT ROSTER ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Agent Roster · Specialists by lifecycle stage</div><h3>The six agents</h3></div>
+      </div>
+      <div class="grid grid-2" id="agent-roster"></div>
+    </section>
+
+    <!-- ============ COLLAB MATRIX ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Agent Collaboration Matrix</div><h3>Which agents team up — and why</h3></div>
+      </div>
+      <table class="tbl">
+        <thead><tr><th>Thread</th><th>Collaborating Agents</th><th>Signal Fusion</th><th class="right">Outcome</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="strong">Houston/Tampa switcher collapse</td>
+            <td>Churn Prevention · Bill-Shock · Network Experience · Care Routing</td>
+            <td class="muted" style="font-size:12.5px;">CSAT timeline + dispute rate + VoLTE MOS + Care transcript sentiment</td>
+            <td class="right good mono">$11.4M predicted save</td>
+          </tr>
+          <tr>
+            <td class="strong">Allegiance private-5G displacement</td>
+            <td>B2B Renewal · Network Experience · Churn Prevention</td>
+            <td class="muted" style="font-size:12.5px;">Competitor activity + MOS in client sites + exec engagement index</td>
+            <td class="right warn mono">$9M defended (est.)</td>
+          </tr>
+          <tr>
+            <td class="strong">FMC cross-sell unlock</td>
+            <td>FMC Cross-Sell · Fiber Activation · Care Routing</td>
+            <td class="muted" style="font-size:12.5px;">Footprint overlap + activation cycle time + care channel moment</td>
+            <td class="right good mono">$210M TAM · 198K adds</td>
+          </tr>
+          <tr>
+            <td class="strong">Southeast fiber backlog</td>
+            <td>Fiber Activation · Network Experience · Churn Prevention · FMC</td>
+            <td class="muted" style="font-size:12.5px;">Backlog age + NPS delta + tech availability + MDU priority</td>
+            <td class="right warn mono">$34M ARR recovered</td>
+          </tr>
+          <tr>
+            <td class="strong">Bill-shock dispute reduction</td>
+            <td>Bill-Shock · Care Routing</td>
+            <td class="muted" style="font-size:12.5px;">Dispute rate + pre-bill SMS opt-in + deflect-to-app rate</td>
+            <td class="right good mono">34% disputes ↓</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============ SIGNAL INGESTION ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Signal Ingestion · 24h</div><h3>What the agents are listening to</h3></div>
+      </div>
+      <div class="grid grid-4">
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc" style="font-size:10.5px;">Qualtrics XM</div>
+          <div class="big mono">1.42M</div>
+          <div class="muted" style="font-size:11.5px;">Survey responses · NPS · CSAT · open-text</div>
+        </div>
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc" style="font-size:10.5px;">Amdocs BSS</div>
+          <div class="big mono">48.6M</div>
+          <div class="muted" style="font-size:11.5px;">Billing events + dispute flags</div>
+        </div>
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc" style="font-size:10.5px;">ServiceNow</div>
+          <div class="big mono">312K</div>
+          <div class="muted" style="font-size:11.5px;">Care interactions · Sev-1 / Sev-2 tickets</div>
+        </div>
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc" style="font-size:10.5px;">Polystar / Cellwize</div>
+          <div class="big mono">9.8B</div>
+          <div class="muted" style="font-size:11.5px;">Network performance records · MOS · RAN</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/assets/data.js"></script>
+  <script src="/assets/charts.js"></script>
+  <script src="/assets/nav.js"></script>
+  <script src="/assets/agent-network.js"></script>
+</body>
+</html>

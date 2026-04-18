@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My People · Meridian One</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+  <div id="__nav__"></div>
+
+  <main class="shell page stack">
+
+    <!-- ============ TOP PERFORMERS ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">How are my people doing?</div>
+          <h3>Top &amp; Bottom Sales Performers</h3>
+          <div class="muted mt-4" style="font-size: 12.5px;">B2B enterprise book · FY-26 QTD</div>
+        </div>
+        <div class="row gap-10">
+          <button class="pill pill-info" style="border:none;">Top 10</button>
+          <button class="pill pill-warn" style="border:none;">Bottom 10</button>
+        </div>
+      </div>
+      <table class="tbl">
+        <thead><tr><th>Sales Leader</th><th class="right">Target vs Actual</th><th class="right">Revenue QTD</th><th class="right">Collab Score</th><th class="right">Experience Score</th><th>Accounts</th></tr></thead>
+        <tbody id="rep-tbl"></tbody>
+      </table>
+    </section>
+
+    <!-- ============ MOOD MONITOR ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Mood Monitor · Pulse survey + passive signals</div><h3>How is the organization feeling?</h3></div>
+      </div>
+      <div class="grid" id="mood-grid" style="grid-template-columns: repeat(5, 1fr); gap: 14px;"></div>
+      <div class="attn">
+        <span class="attn-title">Attention</span>
+        <strong>Commissions Policy sentiment at 42%</strong> is dragging morale — Q1 compensation changes are biting. Worth a comp review before Q3 guide-rail sets.
+      </div>
+    </section>
+
+    <!-- ============ WORK LIFE BALANCE ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Work-Life Balance · Hours / week above 45</div><h3>Who is burning out?</h3></div>
+      </div>
+      <div class="chart-wrap" style="height: 240px;"><div id="wlb-chart"></div></div>
+      <div class="attn bad">
+        <span class="attn-title">Burnout Risk</span>
+        Sales and Support are well below healthy thresholds (pandemic-era reset). Conversely, Marketing held steady — worth understanding what's working there and replicating.
+      </div>
+    </section>
+
+    <!-- ============ MANAGER ATTRIBUTES ============ -->
+    <section class="grid grid-2">
+      <div class="panel">
+        <div class="panel-head"><div><div class="sub">Manager Attributes · 360 Feedback</div><h3>How are managers rated?</h3></div></div>
+        <div class="row" style="justify-content: center; align-items: center;">
+          <div id="mgr-radar" style="width: 380px; height: 380px;"></div>
+        </div>
+        <div class="row gap-14" style="justify-content: center; margin-top: 10px;">
+          <span class="row gap-6"><span class="legend-dot" style="background:#22C55E"></span>Top Performers</span>
+          <span class="row gap-6"><span class="legend-dot" style="background:#60A5FA"></span>Average</span>
+          <span class="row gap-6"><span class="legend-dot" style="background:#EF4444"></span>Bottom</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><div><div class="sub">Sales Rep Training Completion</div><h3>Who's investing in skill development?</h3></div></div>
+        <div class="grid grid-3">
+          <div class="panel dense hollow" style="border:1px solid var(--brand-hairline); background:rgba(34,197,94,0.04);">
+            <div class="uc muted">Top performers</div>
+            <div class="big mono good">94%</div>
+            <div class="muted" style="font-size:12px;">Avg modules completed</div>
+            <hr class="divider"/>
+            <div class="row-between" style="font-size:12px;"><span class="muted">Private 5G cert</span><span class="mono">91%</span></div>
+            <div class="row-between" style="font-size:12px;"><span class="muted">SASE / SD-WAN</span><span class="mono">88%</span></div>
+          </div>
+          <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+            <div class="uc muted">Average</div>
+            <div class="big mono warn">72%</div>
+            <div class="muted" style="font-size:12px;">Avg modules completed</div>
+            <hr class="divider"/>
+            <div class="row-between" style="font-size:12px;"><span class="muted">Private 5G cert</span><span class="mono">58%</span></div>
+            <div class="row-between" style="font-size:12px;"><span class="muted">SASE / SD-WAN</span><span class="mono">64%</span></div>
+          </div>
+          <div class="panel dense hollow" style="border:1px solid var(--brand-hairline); background:rgba(239,68,68,0.04);">
+            <div class="uc muted">Bottom performers</div>
+            <div class="big mono bad">41%</div>
+            <div class="muted" style="font-size:12px;">Avg modules completed</div>
+            <hr class="divider"/>
+            <div class="row-between" style="font-size:12px;"><span class="muted">Private 5G cert</span><span class="mono">22%</span></div>
+            <div class="row-between" style="font-size:12px;"><span class="muted">SASE / SD-WAN</span><span class="mono">28%</span></div>
+          </div>
+        </div>
+        <div class="attn">
+          <span class="attn-title">Correlation</span>
+          Private 5G certification correlates 0.67 with win rate. Mandatory cert cycle for the bottom quartile could lift win rate by 4–6 pts on net-new enterprise deals.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ATTRITION RISK ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Attrition Risk · AI Scored</div><h3>Who might leave?</h3></div>
+        <span class="pill pill-warn">12 flagged · $9M revenue exposure</span>
+      </div>
+      <div class="grid grid-3">
+        <div class="panel dense">
+          <div class="uc muted">High Risk (next 90d)</div>
+          <div class="big mono bad">12</div>
+          <div class="muted" style="font-size:12px;">Sellers &amp; senior CSMs</div>
+          <hr class="divider"/>
+          <div class="stack" style="gap:6px; font-size: 12.5px;">
+            <div>• Comp dissatisfaction · 7</div>
+            <div>• Manager conflict · 3</div>
+            <div>• Career stagnation · 2</div>
+          </div>
+        </div>
+        <div class="panel dense">
+          <div class="uc muted">Revenue at Risk</div>
+          <div class="big mono warn">$9M</div>
+          <div class="muted" style="font-size:12px;">Covered book · ramp-up time 6–9 mo</div>
+          <hr class="divider"/>
+          <div class="muted" style="font-size:12px;">If all 12 leave, book transition cost = $2.4M + 11-month re-ramp per seller.</div>
+        </div>
+        <div class="panel dense">
+          <div class="uc muted">Next Action</div>
+          <div class="muted mt-8" style="font-size:12.5px;">Skip-level coffees with 12 flagged; comp review for 7 most at-risk; expand Private-5G cert track as career pathway.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/assets/data.js"></script>
+  <script src="/assets/charts.js"></script>
+  <script src="/assets/nav.js"></script>
+  <script src="/assets/my-people.js"></script>
+</body>
+</html>

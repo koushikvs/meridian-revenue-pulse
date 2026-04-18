@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revenue Drivers · Meridian One</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+  <div id="__nav__"></div>
+
+  <main class="shell page stack">
+
+    <!-- ============ HEADLINE: 4 REVENUE ENGINES ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Revenue Engines · FY-26 Q2</div>
+          <h3>Four growth motors, four different economics</h3>
+          <div class="muted mt-4" style="font-size:13px;">Mobile + Home + Business + 5G monetization — each panel shows YoY velocity, cohort health, and the one lever to pull this quarter.</div>
+        </div>
+      </div>
+      <div class="grid grid-4">
+        <div class="panel dense" style="background: linear-gradient(180deg, rgba(77,229,255,0.08), transparent);">
+          <div class="uc muted">Consumer Wireless</div>
+          <div class="big mono" style="margin-top: 4px;">$6.40B</div>
+          <div class="muted" style="font-size:12px;">Service Revenue · +2.8% YoY</div>
+          <hr class="divider"/>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">ARPU</span><span class="mono strong">$58.10</span></div>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Gross Adds</span><span class="mono strong">+820K</span></div>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Postpaid Churn</span><span class="mono bad">1.14%</span></div>
+          <div class="muted mt-12" style="font-size:11px;">Lever: First-30-Day CSAT</div>
+        </div>
+
+        <div class="panel dense" style="background: linear-gradient(180deg, rgba(255,200,87,0.08), transparent);">
+          <div class="uc muted">Home (Fiber + FWA)</div>
+          <div class="big mono" style="margin-top: 4px;">$2.70B</div>
+          <div class="muted" style="font-size:12px;">Service Revenue · +12.4% YoY</div>
+          <hr class="divider"/>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Fiber Net Adds</span><span class="mono strong">+260K</span></div>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">FWA Net Adds</span><span class="mono strong">+152K</span></div>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Avg Broadband ARPU</span><span class="mono strong">$71.20</span></div>
+          <div class="muted mt-12" style="font-size:11px;">Lever: Backlog collapse (Southeast)</div>
+        </div>
+
+        <div class="panel dense" style="background: linear-gradient(180deg, rgba(255,45,90,0.08), transparent);">
+          <div class="uc muted">Business</div>
+          <div class="big mono" style="margin-top: 4px;">$2.10B</div>
+          <div class="muted" style="font-size:12px;">Service Revenue · +1.1% YoY</div>
+          <hr class="divider"/>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Enterprise ACV</span><span class="mono strong">$2.9B</span></div>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Renewal NRR</span><span class="mono warn">104%</span></div>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Win Rate</span><span class="mono strong">38%</span></div>
+          <div class="muted mt-12" style="font-size:11px;">Lever: Private-5G + SASE upsell</div>
+        </div>
+
+        <div class="panel dense" style="background: linear-gradient(180deg, rgba(167,139,250,0.08), transparent);">
+          <div class="uc muted">Digital & Adjacencies</div>
+          <div class="big mono" style="margin-top: 4px;">$0.60B</div>
+          <div class="muted" style="font-size:12px;">Stream, Mobile Ads, Apple/Disney bundles · +24% YoY</div>
+          <hr class="divider"/>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Stream subs</span><span class="mono strong">4.1M</span></div>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Ad-supported tier</span><span class="mono strong">62%</span></div>
+          <div class="row-between" style="font-size:12.5px;"><span class="muted">Cross-bundle ARPU lift</span><span class="mono good">+$7.40</span></div>
+          <div class="muted mt-12" style="font-size:11px;">Lever: FMC attach at activation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ARPU SEGMENT STACK ============ -->
+    <section class="grid grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <div><div class="sub">ARPU by Segment · YoY</div><h3>Where is ARPU actually growing?</h3></div>
+        </div>
+        <div class="chart-wrap"><div id="arpu-chart"></div></div>
+        <div class="attn">
+          <span class="attn-title">Insight</span>
+          Premium Unlimited ARPU up 4.1% YoY driven by perks attach; Standard flat; Prepaid pressured. <strong>FMC households ARPU +$7.40</strong> vs mobile-only — attach motion has the highest $/hour CRO effort.
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <div><div class="sub">Net Adds by Product · Quarterly</div><h3>Where is the growth coming from?</h3></div>
+        </div>
+        <div class="chart-wrap"><div id="netadds-chart"></div></div>
+        <div class="attn good">
+          <span class="attn-title">Positive Signal</span>
+          Broadband (Fiber + FWA) has been the net-adds engine for 5 straight quarters. Postpaid phone net adds recovering QoQ but below FY-25 peak.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5G MONETIZATION ROI ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">5G Monetization ROI · Is the $100B capex earning?</div>
+          <h3>Four 5G revenue pillars — each shown as Revenue earned vs CapEx allocated</h3>
+        </div>
+        <span class="pill pill-warn">Payback: 38 mo.</span>
+      </div>
+      <div class="grid grid-4">
+        <div class="panel dense">
+          <div class="uc muted">Premium Unlimited Tiers</div>
+          <div class="big mono good">$1.8B</div>
+          <div class="muted" style="font-size:12px;">ARR lift · 12.4% of wireless base</div>
+          <hr class="divider"/>
+          <div class="row-between" style="font-size:12px;"><span class="muted">CapEx assigned</span><span class="mono">$8.2B</span></div>
+          <div class="row-between" style="font-size:12px;"><span class="muted">Payback</span><span class="mono">28 mo</span></div>
+        </div>
+        <div class="panel dense">
+          <div class="uc muted">Fixed Wireless Access</div>
+          <div class="big mono good">$980M</div>
+          <div class="muted" style="font-size:12px;">ARR · 3.2M subs</div>
+          <hr class="divider"/>
+          <div class="row-between" style="font-size:12px;"><span class="muted">CapEx assigned</span><span class="mono">$4.1B</span></div>
+          <div class="row-between" style="font-size:12px;"><span class="muted">Payback</span><span class="mono">31 mo</span></div>
+        </div>
+        <div class="panel dense">
+          <div class="uc muted">Enterprise Private 5G</div>
+          <div class="big mono warn">$240M</div>
+          <div class="muted" style="font-size:12px;">ARR · 42 deployments</div>
+          <hr class="divider"/>
+          <div class="row-between" style="font-size:12px;"><span class="muted">CapEx assigned</span><span class="mono">$2.8B</span></div>
+          <div class="row-between" style="font-size:12px;"><span class="muted">Payback</span><span class="mono">54 mo</span></div>
+        </div>
+        <div class="panel dense">
+          <div class="uc muted">Network Slicing / API</div>
+          <div class="big mono bad">$48M</div>
+          <div class="muted" style="font-size:12px;">ARR · still nascent</div>
+          <hr class="divider"/>
+          <div class="row-between" style="font-size:12px;"><span class="muted">CapEx assigned</span><span class="mono">$1.4B</span></div>
+          <div class="row-between" style="font-size:12px;"><span class="muted">Payback</span><span class="mono">72+ mo</span></div>
+        </div>
+      </div>
+      <div class="attn bad">
+        <span class="attn-title">Diagnosis</span>
+        Premium tiers and FWA are earning their capex. Private 5G is on track but slow to scale — sales motion gap, not demand gap. <strong>Network API / slicing monetization is the slowest-yielding pillar</strong> — reconsider the capital schedule with CFO.
+      </div>
+    </section>
+
+    <!-- ============ FMC CROSS-SELL FUNNEL ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Fixed-Mobile Convergence · Cross-sell Funnel</div>
+          <h3>$210M TAM unlocked by Q2 fiber footprint expansion</h3>
+        </div>
+        <span class="pill pill-good">+198K net adds projected</span>
+      </div>
+      <div class="grid grid-6" style="gap: 8px;">
+        <div class="panel dense hollow" style="text-align:center; border:1px solid var(--brand-hairline);">
+          <div class="muted uc">In fiber footprint</div>
+          <div class="xlarge mono">8.4M</div>
+          <div class="muted" style="font-size:11px;">mobile-only HH</div>
+        </div>
+        <div class="panel dense hollow" style="text-align:center; border:1px solid var(--brand-hairline);">
+          <div class="muted uc">Newly in-footprint (Q2)</div>
+          <div class="xlarge mono">1.1M</div>
+          <div class="muted" style="font-size:11px;">addressable this Q</div>
+        </div>
+        <div class="panel dense hollow" style="text-align:center; border:1px solid var(--brand-hairline);">
+          <div class="muted uc">Bundle-offer viewed</div>
+          <div class="xlarge mono">640K</div>
+          <div class="muted" style="font-size:11px;">app + care touchpoint</div>
+        </div>
+        <div class="panel dense hollow" style="text-align:center; border:1px solid var(--brand-hairline);">
+          <div class="muted uc">Add-to-cart</div>
+          <div class="xlarge mono">280K</div>
+          <div class="muted" style="font-size:11px;">consideration</div>
+        </div>
+        <div class="panel dense hollow" style="text-align:center; border:1px solid var(--brand-hairline);">
+          <div class="muted uc">Installed</div>
+          <div class="xlarge mono good">198K</div>
+          <div class="muted" style="font-size:11px;">projected EOY</div>
+        </div>
+        <div class="panel dense hollow" style="text-align:center; border:1px solid var(--brand-hairline); background:rgba(34,197,94,0.06);">
+          <div class="muted uc">ARPU lift</div>
+          <div class="xlarge mono good">+$7.40</div>
+          <div class="muted" style="font-size:11px;">per HH / mo</div>
+        </div>
+      </div>
+      <div class="attn good">
+        <span class="attn-title">Upside</span>
+        Historical FMC cohort churn is <strong>38% lower</strong> than mobile-only. Cross-sell motion isn't just acquisition — it's the cheapest retention strategy in the portfolio.
+      </div>
+    </section>
+
+    <!-- ============ B2B PIPELINE HEALTH ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">B2B Pipeline Health</div><h3>Enterprise & Public Sector book</h3></div>
+        <span class="pill pill-info">Coverage 2.9x</span>
+      </div>
+      <div class="grid grid-6">
+        <div class="panel dense"><div class="uc muted">Pipeline (4Q)</div><div class="big mono">$4.2B</div></div>
+        <div class="panel dense"><div class="uc muted">Commit</div><div class="big mono">$1.1B</div></div>
+        <div class="panel dense"><div class="uc muted">Win Rate</div><div class="big mono">38%</div></div>
+        <div class="panel dense"><div class="uc muted">Avg Deal Size</div><div class="big mono">$4.2M</div></div>
+        <div class="panel dense"><div class="uc muted">Avg Cycle</div><div class="big mono">142d</div></div>
+        <div class="panel dense"><div class="uc muted">Gross Renewal</div><div class="big mono">88%</div></div>
+      </div>
+      <hr class="divider"/>
+      <div class="uc muted" style="margin-bottom: 10px;">Pipeline composition by offer</div>
+      <div class="chart-wrap" style="height:180px;"><div id="b2b-comp"></div></div>
+      <div class="attn">
+        <span class="attn-title">What to do</span>
+        Private 5G + SASE bundles carry 2.2x the win rate of connectivity-only deals. Repoint SE capacity to bundled offers; expand Alina Chen's enterprise motion playbook to Mid-Market.
+      </div>
+    </section>
+
+    <!-- ============ CONSUMER CHURN DEEP DIVE ============ -->
+    <section class="grid grid-2">
+      <div class="panel">
+        <div class="panel-head"><div><div class="sub">Port-out Reasons · Consumer Wireless</div><h3>Why are customers leaving?</h3></div></div>
+        <div class="chart-wrap" style="height: 220px;"><div id="port-reasons"></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><div class="sub">Switcher Journey · Q2 Cohort</div><h3>First-30-day experience breakdown</h3></div></div>
+        <div class="stack" style="gap: 10px;">
+          <div class="row-between"><span class="muted">Port-in activated successfully</span><span class="mono strong">96%</span></div>
+          <div class="row-between"><span class="muted">SIM / eSIM activation same-day</span><span class="mono strong">81%</span></div>
+          <div class="row-between"><span class="muted">First-call-to-care ≤ 7 days</span><span class="mono bad">38%</span></div>
+          <div class="row-between"><span class="muted">First-bill dispute rate</span><span class="mono bad">14%</span></div>
+          <div class="row-between"><span class="muted">CSAT at Day 30</span><span class="mono bad">3.1 / 5</span></div>
+          <div class="row-between"><span class="muted">90-day retention</span><span class="mono bad">82%</span></div>
+        </div>
+        <div class="attn bad">
+          <span class="attn-title">The Gap</span>
+          Activation is world-class; Day-30 experience is not. The concierge program lifts CSAT from 3.1 → 3.8 in pilot markets — that moves 90-day retention from 82% → 93%.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/assets/data.js"></script>
+  <script src="/assets/charts.js"></script>
+  <script src="/assets/nav.js"></script>
+  <script src="/assets/revenue-drivers.js"></script>
+</body>
+</html>

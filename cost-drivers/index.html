@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cost Drivers · Meridian One</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+  <div id="__nav__"></div>
+
+  <main class="shell page stack">
+
+    <!-- ============ COSTS OVERVIEW ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">How much is Meridian One spending?</div>
+          <h3>Cost Overview · $9.4B total OpEx (FY-26 Q2)</h3>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns: 340px 1fr; gap: 24px;">
+        <div id="cost-donut" style="width: 340px; height: 280px;"></div>
+        <div id="cost-bars"></div>
+      </div>
+      <div class="attn">
+        <span class="attn-title">Attention</span>
+        Network & CapEx OpEx is <strong>34%</strong> of the cost base — consistent with US Tier-1 benchmarks (32–36%). The outlier is Customer Care at 17% — industry peers are running 12–14%. Cost-to-serve is the margin lever.
+      </div>
+    </section>
+
+    <!-- ============ TOOL ENGAGEMENT ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Technology · ROI</div>
+          <h3>Are field + sales teams actually using the tech we pay for?</h3>
+        </div>
+      </div>
+      <table class="tbl">
+        <thead><tr><th>Tool</th><th>Cost / user</th><th>Usage</th><th>Device</th><th class="right">Opportunity</th></tr></thead>
+        <tbody id="tool-tbl"></tbody>
+      </table>
+      <div class="attn bad">
+        <span class="attn-title">Waste</span>
+        Gong licenses at <strong>$1,600/user</strong> and only <strong>41%</strong> adoption — that is $2.8M in unused seat cost. Either ramp usage via manager dashboards or resize the seat pool. LinkedIn Sales Nav likewise under-adopted on the B2B team.
+      </div>
+    </section>
+
+    <!-- ============ CLV/CAC RATIO & CX BY SEGMENT ============ -->
+    <section class="grid grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="sub">Unit Economics</div>
+            <h3>CLV : CAC by Segment</h3>
+          </div>
+        </div>
+        <div class="grid grid-4">
+          <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+            <div class="muted uc">Postpaid</div><div class="big mono">6.2 : 1</div>
+            <div class="muted" style="font-size: 11.5px;">Healthy · CAC $380</div>
+          </div>
+          <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+            <div class="muted uc">Fiber HH</div><div class="big mono good">8.4 : 1</div>
+            <div class="muted" style="font-size: 11.5px;">Best-in-class · CAC $420</div>
+          </div>
+          <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+            <div class="muted uc">FWA HH</div><div class="big mono warn">3.8 : 1</div>
+            <div class="muted" style="font-size: 11.5px;">Thin · CAC $540</div>
+          </div>
+          <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+            <div class="muted uc">Enterprise</div><div class="big mono good">11.2 : 1</div>
+            <div class="muted" style="font-size: 11.5px;">Long cycle, long life</div>
+          </div>
+        </div>
+        <div class="attn">
+          <span class="attn-title">Diagnosis</span>
+          FWA unit economics are the softest — $540 acquisition against a $2,400 24-month CLV and elevated early churn. Every 1pp of FWA churn prevented = $14M protected.
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><div><div class="sub">Customer Experience by Segment</div><h3>NPS × CSAT × cohort size</h3></div></div>
+        <div id="cx-segments" class="grid grid-2"></div>
+      </div>
+    </section>
+
+    <!-- ============ CHANNEL ROI ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Marketing & Acquisition · Channel Performance</div><h3>Revenue influence &amp; ROI by channel</h3></div>
+        <span class="pill pill-info">All regions · FY-26 YTD</span>
+      </div>
+      <div class="chart-wrap" style="height: 280px;"><div id="channel-roi"></div></div>
+      <div class="attn">
+        <span class="attn-title">Opportunity</span>
+        Referral (420% ROI) and CRM Lifecycle (310%) are the best-performing channels. <strong>Linear TV and Programmatic Display show negative ROI</strong> — reallocating $120M from underperforming upper-funnel into bring-a-friend and referral unlocks ~$380M in incremental service revenue.
+      </div>
+    </section>
+
+    <!-- ============ EMPLOYEE SENTIMENT ON TOOLS ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Seller & Care-Agent Sentiment</div><h3>What are employees saying about our tools?</h3></div>
+      </div>
+      <div class="grid grid-3">
+        <div>
+          <div class="muted uc" style="margin-bottom: 8px;">Salesforce Comms Cloud</div>
+          <div class="stack" style="gap: 6px;">
+            <div class="row-between" style="font-size:12.5px;"><span>“Adds time to deal cycle”</span><span class="bad mono strong">1,240</span></div>
+            <div class="row-between" style="font-size:12.5px;"><span>“Account hierarchy broken”</span><span class="bad mono strong">680</span></div>
+            <div class="row-between" style="font-size:12.5px;"><span>“Mobile flow is unusable”</span><span class="bad mono strong">520</span></div>
+            <div class="row-between" style="font-size:12.5px;"><span>“Great for enterprise accts”</span><span class="good mono strong">340</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="muted uc" style="margin-bottom: 8px;">LinkedIn Sales Navigator</div>
+          <div class="stack" style="gap: 6px;">
+            <div class="row-between" style="font-size:12.5px;"><span>“No B2B prospecting data”</span><span class="bad mono strong">460</span></div>
+            <div class="row-between" style="font-size:12.5px;"><span>“Overlap with CRM”</span><span class="warn mono strong">320</span></div>
+            <div class="row-between" style="font-size:12.5px;"><span>“Helpful for PubSec”</span><span class="good mono strong">210</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="muted uc" style="margin-bottom: 8px;">Gong · Call Intelligence</div>
+          <div class="stack" style="gap: 6px;">
+            <div class="row-between" style="font-size:12.5px;"><span>“I forget to use it”</span><span class="bad mono strong">880</span></div>
+            <div class="row-between" style="font-size:12.5px;"><span>“Great call reviews”</span><span class="good mono strong">640</span></div>
+            <div class="row-between" style="font-size:12.5px;"><span>“Coaching insights useful”</span><span class="good mono strong">420</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="attn">
+        <span class="attn-title">Attention</span>
+        “Adds time to deal cycle” (1,240 mentions) is the #1 negative seller signal on Salesforce. Streamlining the B2B sales flow could reclaim 3.5 hours per rep per week = $6.2M in productivity annually.
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT NPS vs R&D ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Product NPS vs R&D Investment</div><h3>Is our product investment actually moving the experience?</h3></div>
+      </div>
+      <div class="chart-wrap" style="height:260px;"><div id="productnps"></div></div>
+      <div class="attn bad">
+        <span class="attn-title">Correlation</span>
+        M1 Business NPS dropped 41 → 32 over FY-25–Q2 as R&D shifted away from enterprise tooling. <strong>2-quarter lag</strong> between R&D reallocation and NPS impact. Private 5G + SASE product investment should prioritize enterprise feedback loops.
+      </div>
+    </section>
+
+    <!-- ============ CARE COST PER CONTACT ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Care · Cost per Contact &amp; Volume</div><h3>Where is the cost-to-serve concentrated?</h3></div>
+      </div>
+      <div class="grid grid-4">
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc">Manila</div>
+          <div class="big mono">$4.80</div>
+          <div class="muted" style="font-size:12px;">per case · 1.8M cases</div>
+        </div>
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc">New Delhi</div>
+          <div class="big mono">$3.90</div>
+          <div class="muted" style="font-size:12px;">per case · 1.2M cases</div>
+        </div>
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline);">
+          <div class="muted uc">Atlanta</div>
+          <div class="big mono">$11.20</div>
+          <div class="muted" style="font-size:12px;">per case · 2.2M cases · highest skill</div>
+        </div>
+        <div class="panel dense hollow" style="border:1px solid var(--brand-hairline); background: rgba(34,197,94,0.06);">
+          <div class="muted uc">Self-serve (App / KB)</div>
+          <div class="big mono good">$0.08</div>
+          <div class="muted" style="font-size:12px;">per case · 4.6M cases</div>
+        </div>
+      </div>
+      <div class="attn good">
+        <span class="attn-title">Positive Signal</span>
+        Self-serve handles the largest volume (4.6M cases) at $0.08 per case. Deflecting 15% more volume from Atlanta voice = <strong>$37M in annualized care savings</strong>. Knowledge-base expansion pays back in &lt;60 days.
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/assets/data.js"></script>
+  <script src="/assets/charts.js"></script>
+  <script src="/assets/nav.js"></script>
+  <script src="/assets/cost-drivers.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Netlify configuration for Meridian One Revenue Pulse (static site)
+
+[build]
+  publish = "."
+
+# Clean URLs — /revenue-drivers instead of /revenue-drivers/index.html
+[[redirects]]
+  from = "/executive-overview"
+  to   = "/"
+  status = 200
+  force = false
+
+# Caching: assets can be long-cached; HTML stays fresh
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

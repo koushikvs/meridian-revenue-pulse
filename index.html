@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revenue Pulse · Meridian One</title>
+  <meta name="description" content="CRO Decision Engine — US Tier-1 Telecom · Meridian One Communications" />
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+  <div id="__nav__"></div>
+
+  <main class="shell page stack">
+
+    <!-- ============ FORECAST HERO ============ -->
+    <section class="forecast-hero">
+      <div class="row-between" style="align-items: flex-start;">
+        <div style="flex: 1.2;">
+          <div class="panel-head" style="margin-bottom: 8px;">
+            <div>
+              <div class="eyebrow">◎ Q2 Revenue Forecast · FY-26</div>
+              <div class="xlarge mono" style="margin-top: 6px;">$12.10B <span class="muted" style="font-size: 14px; font-weight: 500; letter-spacing: 0; vertical-align: middle;">commit</span></div>
+              <div class="row gap-14 mt-8" style="font-size: 12.5px; color: var(--text-md);">
+                <span class="row gap-6"><span style="width:8px;height:8px;background:#22C55E;border-radius:50%;display:inline-block"></span>Best: $12.35B</span>
+                <span class="row gap-6"><span style="width:8px;height:8px;background:#EF4444;border-radius:50%;display:inline-block"></span>Worst: $11.55B</span>
+                <span class="row gap-6"><span style="width:8px;height:8px;background:#FFC857;border-radius:50%;display:inline-block"></span>Target: $11.80B</span>
+              </div>
+            </div>
+          </div>
+          <div style="position:relative; margin-top: 12px;">
+            <div class="forecast-band"></div>
+            <div style="position:relative; height: 18px;">
+              <div class="forecast-marker target" style="left: calc((11.80 - 11.55) / (12.35 - 11.55) * 100% - 2px); top: -28px;"></div>
+              <div class="forecast-marker" style="left: calc((12.10 - 11.55) / (12.35 - 11.55) * 100% - 2px); top: -28px;"></div>
+            </div>
+            <div class="row-between" style="color: var(--text-lo); font-size: 11px; margin-top: -4px;">
+              <span>$11.55B</span><span>$11.80B · target</span><span>$12.35B</span>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: right; min-width: 160px;">
+          <div class="uc muted">vs Target</div>
+          <div style="font-size: 38px; font-weight: 700; color: var(--status-good); margin-top: 2px;">+$300M</div>
+          <div class="muted" style="font-size: 12px;">Above target</div>
+        </div>
+      </div>
+
+      <div class="grid grid-3 mt-16">
+        <div class="panel" style="background: rgba(255,255,255,0.02); border-color: var(--brand-divider);">
+          <div class="row gap-14" style="align-items:center;">
+            <div id="g-attain" class="gauge"></div>
+            <div>
+              <div class="strong">94%</div>
+              <div class="muted" style="font-size:12px;">Target Attainment</div>
+              <div class="muted" style="font-size:11px;">52% through Q2</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.02); border-color: var(--brand-divider);">
+          <div class="row gap-14" style="align-items:center;">
+            <div id="g-conf" class="gauge"></div>
+            <div>
+              <div class="strong">79%</div>
+              <div class="muted" style="font-size:12px;">Forecast Confidence</div>
+              <div class="muted" style="font-size:11px;">AI-scored</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel" style="background: rgba(255,255,255,0.02); border-color: var(--brand-divider);">
+          <div class="row gap-14" style="align-items:center;">
+            <div id="g-acc" class="gauge"></div>
+            <div>
+              <div class="strong">83%</div>
+              <div class="muted" style="font-size:12px;">Forecast Accuracy</div>
+              <div class="muted" style="font-size:11px;">Trailing 4Q avg</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-callout mt-16">
+        <div class="badge">✦ AI Forecast Analysis</div>
+        <div class="dim" id="forecast-narr" style="font-size: 13.5px; line-height: 1.55;"></div>
+      </div>
+    </section>
+
+    <!-- ============ REVENUE EXPOSURE ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Total Revenue Exposure</div>
+          <h3>$248M net exposure after $44M overlap removed</h3>
+        </div>
+        <div class="row gap-10">
+          <span class="pill pill-warn">+9% QoQ</span>
+          <span class="pill pill-info">62% addressable</span>
+        </div>
+      </div>
+      <div class="exposure-bar">
+        <div style="width: 54%; background: #FF2D5A;"></div>
+        <div style="width: 34%; background: #FFC857;"></div>
+        <div style="width: 12%; background: #A78BFA;"></div>
+      </div>
+      <div class="exposure-legend">
+        <span><span class="legend-dot" style="background:#FF2D5A"></span>Postpaid Port-out · <strong>$135M</strong></span>
+        <span><span class="legend-dot" style="background:#FFC857"></span>Broadband Churn · <strong>$85M</strong></span>
+        <span><span class="legend-dot" style="background:#A78BFA"></span>B2B Renewal Gap · <strong>$72M</strong></span>
+      </div>
+      <div class="attn"><span class="attn-title">Attention</span>Net exposure grew 9% QoQ to $248M. 62% ($154M) is addressable via initiatives already funded — the First-30-Day Concierge alone protects $18M and is Sprint 2 of 3 complete.</div>
+    </section>
+
+    <!-- ============ DEAL RISK RADAR ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Enterprise Deal Risk Radar</div>
+          <h3>Top 5 B2B deals requiring intervention this week</h3>
+        </div>
+        <span class="pill pill-bad">$48M at risk</span>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="tbl" id="deal-radar">
+          <thead>
+            <tr>
+              <th>Account</th><th>Segment</th><th class="right">ACV</th><th>Stage</th><th class="right">Days</th><th class="right">Score</th><th>Risk Signal</th><th>Rep</th><th>Next Step</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ WHERE AM I LOSING + SIMULATOR (2-col) ============ -->
+    <section class="grid grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="sub">Where am I losing potential revenue?</div>
+            <h3>Revenue Leakage Breakdown <span class="muted" style="font-weight:500; font-size: 13px;">· $180M total</span></h3>
+          </div>
+          <span class="pill pill-bad">Trending ↓</span>
+        </div>
+        <div id="leakage-bars"></div>
+        <div class="attn bad">
+          <span class="attn-title">Diagnosis</span>
+          Customer Experience (port-outs) is the largest driver at 38% ($68M). Q2 port-out spike correlates to first-30-day CSAT collapse in Houston/Tampa DMAs — fix here pays back 3.4x.
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="sub">How can I boost revenue?</div>
+            <h3>Scenario Simulator</h3>
+          </div>
+          <span class="pill pill-info">Live Model</span>
+        </div>
+        <div id="sim-body" class="stack" style="gap:4px;">
+          <div class="sim-row"><label>Postpaid Churn</label><input type="range" min="80" max="180" value="114" step="1" data-sim="churn"/><div class="val mono"><span data-out="churn">1.14</span>%</div></div>
+          <div class="sim-row"><label>Wireless ARPU</label><input type="range" min="5500" max="6500" value="5810" step="5" data-sim="arpu"/><div class="val mono">$<span data-out="arpu">58.10</span></div></div>
+          <div class="sim-row"><label>Broadband Net Adds</label><input type="range" min="200" max="700" value="412" step="5" data-sim="bb"/><div class="val mono">+<span data-out="bb">412</span>K</div></div>
+          <div class="sim-row"><label>FMC Attach Rate</label><input type="range" min="10" max="50" value="28" step="1" data-sim="fmc"/><div class="val mono"><span data-out="fmc">28</span>%</div></div>
+          <div class="sim-row"><label>Enterprise Win Rate</label><input type="range" min="25" max="55" value="38" step="1" data-sim="winrate"/><div class="val mono"><span data-out="winrate">38</span>%</div></div>
+        </div>
+        <div class="sim-total row-between mt-12">
+          <div>
+            <div class="muted" style="font-size:11px; text-transform: uppercase; letter-spacing: 0.1em;">Forecast revenue</div>
+            <div class="mono" style="font-size: 24px; font-weight: 700;" id="sim-total">$11.80B</div>
+          </div>
+          <div class="tar">
+            <div class="muted" style="font-size:11px; text-transform: uppercase; letter-spacing: 0.1em;">Delta</div>
+            <div class="mono" style="font-size: 18px; font-weight: 700; color: var(--status-good);" id="sim-delta">+$0.00B</div>
+          </div>
+        </div>
+        <div class="muted mt-8" style="font-size: 12px;">Churn reduction remains the highest-ROI lever — every 10bps of churn prevented protects $34M in annualized service revenue at current base.</div>
+      </div>
+    </section>
+
+    <!-- ============ CAUSAL CHAIN ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">The Causal Chain · Why metrics connect</div>
+          <h3>Customer lifecycle from Awareness to Renewal — each stage feeds the next</h3>
+          <div class="muted mt-4" style="font-size:13px;">Pre-sale is healthy. Friction concentrates in First 30 Days and Bill Shock — the exact window where port-out decisions are seeded.</div>
+        </div>
+        <div class="tar">
+          <div class="muted uc">System Impact</div>
+          <div class="mono" style="font-size:22px; font-weight:700; color: var(--status-bad);">-$180M</div>
+          <div class="muted" style="font-size:11px;">annualized CLV erosion</div>
+        </div>
+      </div>
+      <div class="chain" id="causal-chain"></div>
+      <div class="attn">
+        <span class="attn-title">Insight</span>
+        Fixing First 30 Days alone breaks the downstream cascade — postpaid switchers with First-30-Day CSAT ≥ 3.8 show <strong>3.2x higher 90-day retention</strong>, 28% fewer bill-shock calls, and $340 higher 24-month CLV.
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE SIGNALS PREDICTING CHURN ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Experience Signals Predicting Churn · The Evidence</div>
+          <h3>Customer experience is not just correlated with churn — it predicts it</h3>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <div>
+          <div class="muted uc" style="margin-bottom:10px;">Churn Rate by CSAT Score</div>
+          <div id="csat-bars"></div>
+          <div class="muted mt-12" style="font-size:12px;">Accounts with CSAT below 4.0 churn at <strong>4.7x</strong> the rate of those above 4.5.</div>
+        </div>
+        <div>
+          <div class="muted uc" style="margin-bottom:10px;">Why Customers Port Out</div>
+          <div class="row" style="gap:20px;">
+            <div id="churn-donut" style="width:180px; height:180px;"></div>
+            <div class="flex-1" id="churn-legend"></div>
+          </div>
+        </div>
+        <div>
+          <div class="muted uc" style="margin-bottom:10px;">Journey Stage Risk Map</div>
+          <div id="journey-heat-mini" class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 8px;"></div>
+        </div>
+      </div>
+      <div class="attn bad">
+        <span class="attn-title">Evidence</span>
+        65% of churn is experience-driven (Network quality 28% + First-bill 22% + Support 15%). First-30-Day CSAT is the single highest-predictive signal — a 1-point drop = 18% higher 90-day churn.
+      </div>
+    </section>
+
+    <!-- ============ XM AGENT INTELLIGENCE ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">XM Agent Intelligence · Live Signals</div>
+          <h3>AI agents continuously monitor experience signals across the customer journey</h3>
+          <div class="muted mt-4" style="font-size:13px;">Detecting friction before it becomes churn — 2 critical · 3 warning · 1 opportunity</div>
+        </div>
+        <span class="pill pill-bad">$81M ARR at risk</span>
+      </div>
+      <div class="grid grid-3" id="agent-grid"></div>
+    </section>
+
+    <!-- ============ JOURNEY FRICTION BY SEGMENT (heatmap) ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Journey Friction by Segment</div>
+          <h3>Where in the journey is friction worst and which segment is hit hardest?</h3>
+        </div>
+        <span class="pill pill-warn">$180M CLV at risk</span>
+      </div>
+      <div id="journey-heat"></div>
+      <div class="grid grid-4 mt-16">
+        <div class="panel dense hollow" style="border-left:3px solid var(--status-bad);">
+          <div class="strong">First 30 Days (5.4)</div>
+          <div class="muted" style="font-size:12px;">34K lines affected · <strong>$340</strong> CLV erosion / line · $18M at risk</div>
+          <div class="muted mt-8" style="font-size:12px;">Time-to-first-value exceeds 21 days; 70% of port-outs within 90 days · Worst: FWA HH (4.8)</div>
+        </div>
+        <div class="panel dense hollow" style="border-left:3px solid var(--status-bad);">
+          <div class="strong">Bill Shock Window (5.1)</div>
+          <div class="muted" style="font-size:12px;">41K lines · <strong>$420</strong> credit + support load per dispute · $14M at risk</div>
+          <div class="muted mt-8" style="font-size:12px;">Family plan conversions drive 58% of bill-shock cases · Worst: Prepaid (4.6)</div>
+        </div>
+        <div class="panel dense hollow" style="border-left:3px solid var(--status-warn);">
+          <div class="strong">Care / Support (6.3)</div>
+          <div class="muted" style="font-size:12px;">112K postpaid lines · VoLTE MOS dip = 2.4% retention hit · $28M at risk</div>
+          <div class="muted mt-8" style="font-size:12px;">Manila center handling 31% more drop-call escalations than Atlanta</div>
+        </div>
+        <div class="panel dense hollow" style="border-left:3px solid var(--status-warn);">
+          <div class="strong">Renewal / Retain (6.4)</div>
+          <div class="muted" style="font-size:12px;">7 enterprise accts · <strong>$58M</strong> ACV · $12M expansion gap</div>
+          <div class="muted mt-8" style="font-size:12px;">Manual renewal process; no proactive outreach 60 days before expiry</div>
+        </div>
+      </div>
+      <div class="attn bad">
+        <span class="attn-title">Attention</span>
+        FWA first-30-day (4.8/10) is the single highest-friction point in the entire lifecycle — new 5G Home customers churning within 90 days erodes $420 in CLV per HH and puts $22M ARR at risk.
+      </div>
+    </section>
+
+    <!-- ============ VALUE CHAIN HEALTH ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Value Chain Health · Click to explore</div>
+          <h3>Function-by-function scorecard</h3>
+        </div>
+      </div>
+      <div class="grid" id="value-chain" style="grid-template-columns: repeat(6, 1fr); gap: 12px;"></div>
+    </section>
+
+    <!-- ============ ACCOUNT WATCHLIST ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Account Watchlist · Who should you call this week?</div>
+          <h3>$114M combined ACV across 5 enterprise accounts</h3>
+        </div>
+        <span class="pill pill-bad">Act this week</span>
+      </div>
+      <div id="watchlist" class="stack" style="gap:10px;"></div>
+      <div class="attn bad">
+        <span class="attn-title">Pattern</span>
+        Allegiance Financial ($24M) shows the classic experience-to-churn path: NPS dropped 18 pts to 62, 41 days since exec contact, renewal in FY26 Q3, and <strong>AT&amp;T Business just pitched a private-5G POC</strong>. You are inside the 90-day intervention window.
+      </div>
+    </section>
+
+    <!-- ============ THIS WEEK'S ACTIONS ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">This Week's Actions</div>
+          <h3>$330M total impact <span class="muted" style="font-weight:500; font-size:13px;">· 2 Active · 2 Pending · 1 Blocked</span></h3>
+        </div>
+      </div>
+      <div id="actions" class="stack" style="gap:10px;"></div>
+    </section>
+
+    <!-- ============ BOARD-READY SUMMARY (teaser) ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Board-Ready Summary · One-Click QBR</div>
+          <h3>Quarter assessment, wins, risks, and strategic asks — ready for distribution</h3>
+        </div>
+        <a href="/board-summary/" class="pill pill-info">Open full board view →</a>
+      </div>
+      <div class="grid grid-6" id="board-mini"></div>
+    </section>
+
+  </main>
+
+  <script src="/assets/data.js"></script>
+  <script src="/assets/charts.js"></script>
+  <script src="/assets/nav.js"></script>
+  <script src="/assets/summary.js"></script>
+</body>
+</html>

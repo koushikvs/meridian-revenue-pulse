@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Board Summary · Meridian One</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+  <div id="__nav__"></div>
+
+  <main class="shell page stack">
+
+    <!-- ============ HEADER ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="sub">Executive QBR · Meridian One Communications</div>
+          <h3>CRO Board Summary — FY-26 Q2</h3>
+          <div class="muted mt-4" style="font-size:12.5px;">Generated from Revenue Pulse · April 18, 2026</div>
+        </div>
+        <div class="row gap-10">
+          <span class="pill pill-info">Canva-ready</span>
+          <span class="pill pill-good">On Track — with Risks</span>
+        </div>
+      </div>
+      <div class="forecast-band" style="padding: 20px; margin-top: 12px;">
+        <div class="sub" style="margin-bottom: 6px;">Headline assessment</div>
+        <div style="font-size: 17px; line-height: 1.5;" id="board-assessment"></div>
+      </div>
+    </section>
+
+    <!-- ============ METRICS GRID ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Scorecard · 6 core KPIs</div><h3>Where we stand</h3></div>
+      </div>
+      <div class="grid grid-3" id="board-metrics"></div>
+    </section>
+
+    <!-- ============ WINS / CHALLENGES ============ -->
+    <section class="grid grid-2">
+      <div class="panel">
+        <div class="panel-head"><div><div class="sub">Wins — Quarter in Review</div><h3>What's working</h3></div><span class="pill pill-good">3</span></div>
+        <div class="stack" id="board-wins"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><div class="sub">Challenges — Quarter in Review</div><h3>What's at risk</h3></div><span class="pill pill-warn">3</span></div>
+        <div class="stack" id="board-challenges"></div>
+      </div>
+    </section>
+
+    <!-- ============ REVENUE BRIDGE ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Revenue Bridge · FY25 Q2 → FY26 Q2</div><h3>Where the $480M of YoY growth came from</h3></div>
+      </div>
+      <div id="board-bridge" class="stack" style="gap: 10px;"></div>
+      <div class="attn">
+        <span class="attn-title">Reading the bridge</span>
+        Gross adds + ARPU and Broadband/FMC drove +$1.02B of upside, but churn & downgrade gave back $540M — so net YoY is +$480M. <strong>Defending the $540M leak is the largest protectable lever on this chart.</strong>
+      </div>
+    </section>
+
+    <!-- ============ RISKS & MITIGATIONS ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Top Risks · Board-level</div><h3>Structural risks &amp; live mitigations</h3></div>
+      </div>
+      <table class="tbl">
+        <thead><tr><th style="width: 38%;">Risk</th><th style="width: 42%;">Mitigation in flight</th><th>Owner</th></tr></thead>
+        <tbody id="board-risks"></tbody>
+      </table>
+    </section>
+
+    <!-- ============ ASKS ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Board Asks · Q3 Investment Pool</div><h3>What we need from the board</h3></div>
+        <span class="pill pill-info">$47.5M total</span>
+      </div>
+      <div class="stack" id="board-asks"></div>
+    </section>
+
+    <!-- ============ DATA PROVENANCE ============ -->
+    <section class="panel">
+      <div class="panel-head">
+        <div><div class="sub">Data Provenance</div><h3>Systems feeding this board pack</h3></div>
+      </div>
+      <div class="grid grid-3" id="board-sources"></div>
+    </section>
+
+  </main>
+
+  <script src="/assets/data.js"></script>
+  <script src="/assets/charts.js"></script>
+  <script src="/assets/nav.js"></script>
+  <script src="/assets/board-summary.js"></script>
+</body>
+</html>
