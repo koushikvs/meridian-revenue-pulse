@@ -21,7 +21,7 @@
     const valueW = 70;
     const barW = w - labelW - valueW - 20;
     const h = items.length * rowH;
-    const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, preserveAspectRatio: 'none' });
+    const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, preserveAspectRatio: 'xMidYMid meet' });
     items.forEach((it, i) => {
       const y = i * rowH + 6;
       const pct = it.value / max;
@@ -102,7 +102,7 @@
     const y2 = v => padT + (h - padT - padB) * (1 - (v - ymin) / ySpan);
     const x2 = i => padL + i * xStep;
 
-    const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, width: w, height: h, preserveAspectRatio: 'xMidYMid meet', style: 'max-width:100%;' });
+    const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, preserveAspectRatio: 'xMidYMid meet' });
 
     // gridlines
     const gridCount = 4;
@@ -150,7 +150,7 @@
     const ymax = opts.yMax || Math.max.apply(null, allYs) * 1.1;
     const y2 = v => padT + (h - padT - padB) * (1 - v / ymax);
 
-    const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, width: w, height: h, preserveAspectRatio: 'xMidYMid meet', style: 'max-width:100%;' });
+    const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, preserveAspectRatio: 'xMidYMid meet' });
     for (let g = 0; g <= 4; g++) {
       const yy = padT + (h - padT - padB) * (g / 4);
       svg.appendChild(el('line', { x1: padL, x2: w - padR, y1: yy, y2: yy, stroke: 'rgba(255,255,255,0.05)' }));
@@ -183,7 +183,7 @@
     const n = axes.length;
     // Expand viewBox to include padding for axis labels that extend outside size.
     const pad = 52;
-    const svg = el('svg', { viewBox: `${-pad} ${-pad} ${size + pad * 2} ${size + pad * 2}`, width: size, height: size, preserveAspectRatio: 'xMidYMid meet' });
+    const svg = el('svg', { viewBox: `${-pad} ${-pad} ${size + pad * 2} ${size + pad * 2}`, preserveAspectRatio: 'xMidYMid meet' });
     // grid
     for (let r = 1; r <= 4; r++) {
       const rr = R * (r / 4);
