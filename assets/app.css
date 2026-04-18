@@ -270,6 +270,13 @@ h2 { font-size: 18px; letter-spacing: -0.01em; }
   position: relative;
   margin: 18px 0 10px;
 }
+.intro-band {
+  padding: 18px 20px;
+  background: linear-gradient(180deg, rgba(77,229,255,0.04), rgba(77,229,255,0.01));
+  border: 1px solid var(--brand-hairline);
+  border-left: 3px solid var(--brand-accent);
+  border-radius: 10px;
+}
 .forecast-marker {
   position: absolute; top: -6px; width: 4px; height: 22px; border-radius: 2px;
   background: var(--brand-gold); box-shadow: 0 0 10px rgba(255,200,87,0.7);
@@ -304,6 +311,11 @@ h2 { font-size: 18px; letter-spacing: -0.01em; }
 .exposure-bar > div { height: 100%; }
 .exposure-legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; color: var(--text-md); font-size: 12.5px; }
 .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+
+/* Chart legend (series swatch + label) */
+.chart-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; padding: 0 4px; color: var(--text-md); font-size: 12px; }
+.chart-legend .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+.chart-legend .legend-swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
 
 /* Tables */
 table.tbl {
@@ -434,7 +446,8 @@ hr.divider { border: none; border-top: 1px solid var(--brand-divider); margin: 1
 
 /* Chart containers */
 .chart-wrap { width: 100%; height: 240px; position: relative; }
-.chart-wrap svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.chart-wrap svg { max-width: 100%; height: auto; display: block; }
+.chart-wrap { overflow: hidden; }
 
 .bar-list .bar-row { display: grid; grid-template-columns: 180px 1fr 80px; align-items: center; gap: 14px; padding: 6px 0; }
 .bar-list .bar-row .bar-bg { height: 10px; background: #0B1020; border-radius: 6px; overflow: hidden; }

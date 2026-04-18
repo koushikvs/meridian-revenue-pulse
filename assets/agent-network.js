@@ -4,7 +4,7 @@
 
   // Threads
   const threads = D.agentThreads || D.threads || [];
-document.getElementById('threads').innerHTML = threads.map(t => `
+  document.getElementById('threads').innerHTML = threads.map(t => `
     <div class="panel dense" style="${t.active ? 'border-left: 3px solid var(--brand-primary);' : 'border-left: 3px solid var(--brand-hairline);'}">
       <div class="row-between">
         <div class="row gap-10">

@@ -17,7 +17,7 @@
     const max = opts.max || Math.max.apply(null, items.map(i => i.value));
     const w  = opts.width || 480;
     const rowH = opts.rowHeight || 34;
-    const labelW = opts.labelWidth || 170;
+    const labelW = opts.labelWidth || 230;
     const valueW = 70;
     const barW = w - labelW - valueW - 20;
     const h = items.length * rowH;
@@ -102,7 +102,7 @@
     const y2 = v => padT + (h - padT - padB) * (1 - (v - ymin) / ySpan);
     const x2 = i => padL + i * xStep;
 
-    const svg = el('svg', { viewBox: `0 0 ${w} ${h}` });
+    const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, width: w, height: h, preserveAspectRatio: 'xMidYMid meet', style: 'max-width:100%;' });
 
     // gridlines
     const gridCount = 4;
@@ -150,7 +150,7 @@
     const ymax = opts.yMax || Math.max.apply(null, allYs) * 1.1;
     const y2 = v => padT + (h - padT - padB) * (1 - v / ymax);
 
-    const svg = el('svg', { viewBox: `0 0 ${w} ${h}` });
+    const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, width: w, height: h, preserveAspectRatio: 'xMidYMid meet', style: 'max-width:100%;' });
     for (let g = 0; g <= 4; g++) {
       const yy = padT + (h - padT - padB) * (g / 4);
       svg.appendChild(el('line', { x1: padL, x2: w - padR, y1: yy, y2: yy, stroke: 'rgba(255,255,255,0.05)' }));
@@ -181,7 +181,9 @@
     const cx = size / 2, cy = size / 2;
     const R = size / 2 - 30;
     const n = axes.length;
-    const svg = el('svg', { viewBox: `0 0 ${size} ${size}` });
+    // Expand viewBox to include padding for axis labels that extend outside size.
+    const pad = 52;
+    const svg = el('svg', { viewBox: `${-pad} ${-pad} ${size + pad * 2} ${size + pad * 2}`, width: size, height: size, preserveAspectRatio: 'xMidYMid meet' });
     // grid
     for (let r = 1; r <= 4; r++) {
       const rr = R * (r / 4);
@@ -192,12 +194,16 @@
       }
       svg.appendChild(el('polygon', { points: pts.join(' '), fill: 'none', stroke: 'rgba(255,255,255,0.06)' }));
     }
-    // axis labels
+    // axis labels — dynamic text-anchor keeps labels aligned inward from the ring
     axes.forEach((label, i) => {
       const a = -Math.PI / 2 + i * (2 * Math.PI / n);
-      const lx = cx + (R + 18) * Math.cos(a);
-      const ly = cy + (R + 18) * Math.sin(a) + 3;
-      const t = el('text', { x: lx, y: ly, 'text-anchor': 'middle', fill: '#B9C0D4', 'font-size': 10.5 });
+      const lx = cx + (R + 20) * Math.cos(a);
+      const ly = cy + (R + 20) * Math.sin(a) + 3;
+      const cosA = Math.cos(a);
+      let anchor = 'middle';
+      if (cosA > 0.3) anchor = 'start';
+      else if (cosA < -0.3) anchor = 'end';
+      const t = el('text', { x: lx, y: ly, 'text-anchor': anchor, fill: '#B9C0D4', 'font-size': 10.5 });
       t.textContent = label;
       svg.appendChild(t);
     });
