@@ -10,11 +10,12 @@
   status = 200
   force = false
 
-# Caching: assets can be long-cached; HTML stays fresh
+# Caching: during active dev, always revalidate assets so pushes land instantly.
+# Restore max-age=3600 once the design is locked.
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, max-age=0, must-revalidate"
     X-Content-Type-Options = "nosniff"
 
 [[headers]]
