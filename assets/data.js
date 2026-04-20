@@ -315,12 +315,127 @@ window.RPData = {
     ]
   },
 
-  /* Agent Network threads */
+  /* Agent Network threads — full master-detail conversations.
+     participants / sender / recipients use agent keys that map to CSS color tokens:
+       churn (Churn Prevention)   · support (Bill-Shock Prevention)
+       onboarding (Fiber Activation) · research (Network Experience)
+       expansion (B2B Renewal)    · sales (FMC Cross-Sell)               */
   agentThreads: [
-    { title: 'Houston/Tampa switcher cohort collapse — $18M ARR at risk', agents: 4, msgs: 7, active: true },
-    { title: 'Allegiance Financial private-5G competitive displacement required', agents: 3, msgs: 6 },
-    { title: 'FMC bundle signal-to-action lag — $210M TAM unlocked', agents: 3, msgs: 5 },
-    { title: 'Southeast fiber backlog — technician flex validated', agents: 4, msgs: 4 },
-    { title: 'Bill-shock pre-notify pilot — 34% dispute reduction; roll to family plans', agents: 2, msgs: 3 }
+    {
+      id: 'fwa-dfw',
+      status: 'active',
+      priority: 'high',
+      title: 'FWA churn spike in Dallas-Fort Worth — T-Mobile 5G Home displacement',
+      preview: 'Churn Prevention flagged 3.2% churn vs 1.8% baseline. Cross-agent save motion under CRO review.',
+      openedAt: 'Apr 18 · 10:14 AM',
+      lastActivity: '2h ago',
+      participants: ['churn', 'research', 'sales', 'support'],
+      messages: [
+        {
+          sender: 'churn',
+          body: 'Detected anomaly. FWA churn in Dallas-Fort Worth is 3.2% this month, up from a 1.8% baseline. 3,400 accounts are in the danger zone over the next six months if the spike holds.',
+          metrics: [
+            { v: '3.2%',  l: 'DFW FWA Churn' },
+            { v: '1.8%',  l: '12-mo baseline' },
+            { v: '3.4K',  l: 'At-risk accounts' }
+          ],
+          callouts: [
+            { type: 'risk', title: 'ARR exposure', body: '$8.2M over six months if the spike holds and no intervention is taken.' }
+          ],
+          time: 'Apr 18 · 10:14 AM'
+        },
+        {
+          sender: 'research',
+          recipients: ['churn'],
+          body: 'Pulled competitive and network telemetry. VoLTE MOS and drop-call rates in DFW actually improved this quarter — service is not the cause. T-Mobile launched 5G Home Internet in DFW on April 1 at $50/mo with a 12-month price lock. Six-week overlap with our churn spike is not coincidence.',
+          metrics: [
+            { v: '+4 pts', l: 'DFW NPS Δ' },
+            { v: '$50/mo', l: 'Competitor price' },
+            { v: '12 mo',  l: 'Price lock' }
+          ],
+          callouts: [
+            { type: 'insight', title: 'Root cause isolated', body: 'Competitor displacement, not service failure. DFW NPS is up four points this quarter — customers are leaving despite an improving network experience.' }
+          ],
+          time: 'Apr 18 · 10:38 AM'
+        },
+        {
+          sender: 'sales',
+          recipients: ['churn', 'support'],
+          body: 'Ran account-level segmentation on the 3,400 at-risk households. Two distinct populations emerged: 2,100 are >12-month tenured with multi-service (FWA + mobile), largely price-insensitive. 1,300 are <6-month tenured, single-service, highly price-sensitive.',
+          callouts: [
+            { type: 'synthesis', title: 'Two segments, two motions', body: 'Tenured customers respond to loyalty credit and concierge touch. Price-sensitive customers respond only to matched price-lock offers. Treating them as one cohort will waste spend.' }
+          ],
+          time: 'Apr 18 · 11:02 AM'
+        },
+        {
+          sender: 'support',
+          recipients: ['churn', 'research', 'sales'],
+          body: 'Proposing response package. Tenured 2,100: retention concierge + $25/mo loyalty credit for 3 months. Price-sensitive 1,300: matched 12-month price-lock at $52/mo. Financed against the Q2 retention reserve.',
+          metrics: [
+            { v: '2.1K',  l: 'Tenured (concierge)' },
+            { v: '1.3K',  l: 'Price-sensitive (lock)' },
+            { v: '78%',   l: 'Modeled retention' }
+          ],
+          callouts: [
+            { type: 'action', title: 'CRO approval required', body: 'Estimated save: $6.4M of the $8.2M at risk. Offer can deploy within 24h of sign-off.' }
+          ],
+          time: 'Apr 18 · 11:47 AM'
+        },
+        {
+          sender: 'churn',
+          body: 'Tracking. Reporting retention rate by cohort at day 14 and day 30.',
+          time: 'Apr 18 · 11:49 AM'
+        }
+      ]
+    },
+    {
+      id: 'prepaid-migration',
+      status: 'resolved',
+      priority: 'medium',
+      title: 'Q1 prepaid → postpaid migration — campaign results',
+      preview: '48K targeted · 9.2K converted · persona insights locked for Q2.',
+      openedAt: 'Apr 8 · 9:22 AM',
+      lastActivity: 'Apr 9 · 2:14 PM',
+      participants: ['sales', 'churn'],
+      messages: [
+        {
+          sender: 'sales',
+          body: 'Closing out the Q1 prepaid-to-postpaid migration campaign. Targeted 48K heavy-usage prepaid customers with a structured upgrade offer.',
+          metrics: [
+            { v: '48K',   l: 'Targeted' },
+            { v: '9.2K',  l: 'Converted' },
+            { v: '19.2%', l: 'Conversion' }
+          ],
+          time: 'Apr 8 · 9:22 AM'
+        },
+        {
+          sender: 'churn',
+          recipients: ['sales'],
+          body: 'Persona breakdown on the 9,200 conversions is sharp. Concentrated in two personas: gig workers with >8GB/month (28% conversion), and multi-line family-of-3+ households (24% conversion). Low-usage prepaid (<4GB) converted at under 8%.',
+          callouts: [
+            { type: 'insight', title: "Don't chase low-usage", body: 'Conversion correlates strongly with usage intensity. Low-usage prepaid customers converted at sub-8% and burned through most of the campaign spend. Drop them from Q2 targeting.' }
+          ],
+          time: 'Apr 8 · 10:05 AM'
+        },
+        {
+          sender: 'sales',
+          body: 'Confirmed downstream economics. ARPU lift on the converted cohort: $37 → $62 blended. 24-month LTV expansion: +$1,040 per conversion. Total Q1 ARR lift: $2.8M.',
+          metrics: [
+            { v: '$37→$62', l: 'Blended ARPU' },
+            { v: '+$1,040', l: 'LTV per conversion' },
+            { v: '$2.8M',   l: 'Q1 ARR lift' }
+          ],
+          callouts: [
+            { type: 'synthesis', title: 'Q2 recommendation', body: 'Double targeting spend on gig + multi-line personas. Drop the low-usage segment. Model predicts $4.6M Q2 ARR lift at the same campaign budget.' }
+          ],
+          time: 'Apr 8 · 10:41 AM'
+        },
+        {
+          sender: 'sales',
+          body: 'Handoff to Marketing for Q2 campaign design. Closing thread.',
+          time: 'Apr 9 · 2:14 PM'
+        }
+      ]
+    }
   ]
 };

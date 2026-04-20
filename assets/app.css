@@ -649,3 +649,94 @@ hr.divider { border: none; border-top: 1px solid var(--brand-divider); margin: 1
 .msg-metrics .mm { display: flex; flex-direction: column; gap: 2px; }
 .msg-metrics .mm-value { font-size: 20px; font-weight: 800; color: var(--text-hi); font-family: var(--font-mono, ui-monospace, 'SF Mono', monospace); }
 .msg-metrics .mm-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-lo); }
+
+/* ============================================================
+   Pass 2 additions
+   ============================================================ */
+
+/* Generic agent-color setter — applies agent identity to any element.
+   Lets .ag-chip, .sender-dot, etc. pick up the right color without being
+   nested inside an .agent-tile. */
+.ag-churn      { --agent-color: var(--agent-churn);      --agent-bg: var(--agent-churn-bg); }
+.ag-sales      { --agent-color: var(--agent-sales);      --agent-bg: var(--agent-sales-bg); }
+.ag-support    { --agent-color: var(--agent-support);    --agent-bg: var(--agent-support-bg); }
+.ag-onboarding { --agent-color: var(--agent-onboarding); --agent-bg: var(--agent-onboarding-bg); }
+.ag-expansion  { --agent-color: var(--agent-expansion);  --agent-bg: var(--agent-expansion-bg); }
+.ag-research   { --agent-color: var(--agent-research);   --agent-bg: var(--agent-research-bg); }
+
+/* Standalone .ag-chip (used in thread-list and convo-header participant lists) */
+.ag-chip {
+  width: 22px; height: 22px; border-radius: 5px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--agent-bg, rgba(77,229,255,0.10));
+  color: var(--agent-color, var(--brand-accent));
+  font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Horizontal-scroll wrapper so wide tables degrade gracefully on small screens */
+.tbl-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.tbl-scroll table.tbl { min-width: 640px; }
+
+/* ============================================================
+   Mobile breakpoints (Option A — graceful degradation)
+   ============================================================ */
+
+/* Tablet (≤ 960px) */
+@media (max-width: 960px) {
+  .shell         { padding: 0 16px; }
+  .page          { padding: 16px 0 48px; }
+
+  /* Dense grids collapse to 2 columns */
+  .grid-3, .grid-4, .grid-6 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+  /* Panel padding a notch smaller */
+  .panel         { padding: 16px 18px; }
+  .panel.dense   { padding: 12px 14px; }
+  .panel-head    { flex-wrap: wrap; gap: 10px; }
+
+  /* Detail panel tightens up */
+  .detail-panel  { padding: 14px 16px; }
+
+  /* KPI ribbon shrinks */
+  .kpi-ribbon-inner { gap: 14px; }
+
+  /* Tabbar + subtabs scroll horizontally rather than wrap */
+  .tabbar-inner, .subtabs {
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+  }
+  .tabbar-inner a, .subtabs a { white-space: nowrap; flex: 0 0 auto; }
+}
+
+/* Phone (≤ 640px) */
+@media (max-width: 640px) {
+  .shell         { padding: 0 12px; }
+  .page          { padding: 12px 0 40px; }
+
+  /* All grids collapse to single column */
+  .grid-2, .grid-3, .grid-4, .grid-6 { grid-template-columns: 1fr; }
+
+  .panel         { padding: 14px; }
+  .panel.dense   { padding: 12px; }
+
+  /* Smaller hero / kpi type */
+  .panel-head h3 { font-size: 18px; line-height: 1.25; }
+  .big           { font-size: 24px !important; }
+
+  /* KPI ribbon — 2-col grid on phone, drop the "DATA FOR" anchor */
+  .kpi-ribbon-inner { grid-template-columns: 1fr 1fr; gap: 10px 16px; padding: 10px 0; }
+  .kpi-ribbon-inner .kpi-label-anchor { display: none; }
+
+  /* Topbar: hide welcome text to save space */
+  .topbar-inner .nav-user { display: none; }
+
+  /* Master-detail list takes less vertical room on phone */
+  .master-list { max-height: 360px; }
+
+  /* Message metrics wrap rather than overflow */
+  .msg-metrics { flex-wrap: wrap; gap: 12px 18px; }
+}

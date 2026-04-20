@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Agent Network · Meridian One</title>
-  <link rel="stylesheet" href="/assets/app.css?v=p1b" />
+  <link rel="stylesheet" href="/assets/app.css?v=p2" />
 </head>
 <body>
   <div id="__nav__"></div>
@@ -28,25 +28,28 @@
       <div class="intro-band" style="margin-top: 12px;">
         <div class="sub" style="margin-bottom: 6px;">How it works</div>
         <div style="font-size: 14px; line-height: 1.55;">
-          Each agent owns a <strong>specific moment in the customer lifecycle</strong> and listens for structural weakness in that moment — billing, activation, renewal, bundle attach, care, network. Agents cross-talk to each other (see Active Threads below) before recommending action, so the CRO sees <strong>one coherent intervention, not six siloed alerts.</strong>
+          Each agent owns a <strong>specific moment in the customer lifecycle</strong> — billing, activation, renewal, bundle attach, care, network. Agents cross-talk to each other (select any thread below) before recommending action, so the CRO sees <strong>one coherent intervention, not six siloed alerts.</strong>
         </div>
       </div>
     </section>
 
-    <!-- ============ ACTIVE THREADS ============ -->
+    <!-- ============ MASTER-DETAIL: roster + threads | conversation ============ -->
     <section class="panel">
       <div class="panel-head">
-        <div><div class="sub">Active Agent Threads · Cross-functional collaborations in flight</div><h3>What agents are working on right now</h3></div>
+        <div>
+          <div class="sub">Live Agent Network · Threads you can listen in on</div>
+          <h3>What the agents are talking about right now</h3>
+        </div>
       </div>
-      <div class="stack" id="threads"></div>
-    </section>
-
-    <!-- ============ AGENT ROSTER ============ -->
-    <section class="panel">
-      <div class="panel-head">
-        <div><div class="sub">Agent Roster · Specialists by lifecycle stage</div><h3>The six agents</h3></div>
+      <div class="master-detail" style="margin-top: 14px;">
+        <div class="master-list">
+          <div class="sub" style="margin-bottom: 6px;">Agent roster · 6 specialists</div>
+          <div id="agent-roster" class="stack" style="gap: 8px;"></div>
+          <div class="sub" style="margin-top: 14px; margin-bottom: 6px;">Active threads · cross-agent</div>
+          <div id="thread-list" class="stack" style="gap: 8px;"></div>
+        </div>
+        <div id="detail-panel" class="detail-panel"></div>
       </div>
-      <div class="grid grid-2" id="agent-roster"></div>
     </section>
 
     <!-- ============ COLLAB MATRIX ============ -->
@@ -54,41 +57,43 @@
       <div class="panel-head">
         <div><div class="sub">Agent Collaboration Matrix</div><h3>Which agents team up — and why</h3></div>
       </div>
-      <table class="tbl">
-        <thead><tr><th>Thread</th><th>Collaborating Agents</th><th>Signal Fusion</th><th class="right">Outcome</th></tr></thead>
-        <tbody>
-          <tr>
-            <td class="strong">Houston/Tampa switcher collapse</td>
-            <td>Churn Prevention · Bill-Shock · Network Experience · Care Routing</td>
-            <td class="muted" style="font-size:12.5px;">CSAT timeline + dispute rate + VoLTE MOS + Care transcript sentiment</td>
-            <td class="right good mono">$11.4M predicted save</td>
-          </tr>
-          <tr>
-            <td class="strong">Allegiance private-5G displacement</td>
-            <td>B2B Renewal · Network Experience · Churn Prevention</td>
-            <td class="muted" style="font-size:12.5px;">Competitor activity + MOS in client sites + exec engagement index</td>
-            <td class="right warn mono">$9M defended (est.)</td>
-          </tr>
-          <tr>
-            <td class="strong">FMC cross-sell unlock</td>
-            <td>FMC Cross-Sell · Fiber Activation · Care Routing</td>
-            <td class="muted" style="font-size:12.5px;">Footprint overlap + activation cycle time + care channel moment</td>
-            <td class="right good mono">$210M TAM · 198K adds</td>
-          </tr>
-          <tr>
-            <td class="strong">Southeast fiber backlog</td>
-            <td>Fiber Activation · Network Experience · Churn Prevention · FMC</td>
-            <td class="muted" style="font-size:12.5px;">Backlog age + NPS delta + tech availability + MDU priority</td>
-            <td class="right warn mono">$34M ARR recovered</td>
-          </tr>
-          <tr>
-            <td class="strong">Bill-shock dispute reduction</td>
-            <td>Bill-Shock · Care Routing</td>
-            <td class="muted" style="font-size:12.5px;">Dispute rate + pre-bill SMS opt-in + deflect-to-app rate</td>
-            <td class="right good mono">34% disputes ↓</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="tbl-scroll">
+        <table class="tbl">
+          <thead><tr><th>Thread</th><th>Collaborating Agents</th><th>Signal Fusion</th><th class="right">Outcome</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="strong">Houston/Tampa switcher collapse</td>
+              <td>Churn Prevention · Bill-Shock · Network Experience · Care Routing</td>
+              <td class="muted" style="font-size:12.5px;">CSAT timeline + dispute rate + VoLTE MOS + Care transcript sentiment</td>
+              <td class="right good mono">$11.4M predicted save</td>
+            </tr>
+            <tr>
+              <td class="strong">Allegiance private-5G displacement</td>
+              <td>B2B Renewal · Network Experience · Churn Prevention</td>
+              <td class="muted" style="font-size:12.5px;">Competitor activity + MOS in client sites + exec engagement index</td>
+              <td class="right warn mono">$9M defended (est.)</td>
+            </tr>
+            <tr>
+              <td class="strong">FMC cross-sell unlock</td>
+              <td>FMC Cross-Sell · Fiber Activation · Care Routing</td>
+              <td class="muted" style="font-size:12.5px;">Footprint overlap + activation cycle time + care channel moment</td>
+              <td class="right good mono">$210M TAM · 198K adds</td>
+            </tr>
+            <tr>
+              <td class="strong">Southeast fiber backlog</td>
+              <td>Fiber Activation · Network Experience · Churn Prevention · FMC</td>
+              <td class="muted" style="font-size:12.5px;">Backlog age + NPS delta + tech availability + MDU priority</td>
+              <td class="right warn mono">$34M ARR recovered</td>
+            </tr>
+            <tr>
+              <td class="strong">Bill-shock dispute reduction</td>
+              <td>Bill-Shock · Care Routing</td>
+              <td class="muted" style="font-size:12.5px;">Dispute rate + pre-bill SMS opt-in + deflect-to-app rate</td>
+              <td class="right good mono">34% disputes ↓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <!-- ============ SIGNAL INGESTION ============ -->
@@ -122,9 +127,9 @@
 
   </main>
 
-  <script src="/assets/data.js?v=p1b"></script>
-  <script src="/assets/charts.js?v=p1b"></script>
-  <script src="/assets/nav.js?v=p1b"></script>
-  <script src="/assets/agent-network.js?v=p1b"></script>
+  <script src="/assets/data.js?v=p2"></script>
+  <script src="/assets/charts.js?v=p2"></script>
+  <script src="/assets/nav.js?v=p2"></script>
+  <script src="/assets/agent-network.js?v=p2"></script>
 </body>
 </html>
